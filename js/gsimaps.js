@@ -1288,7 +1288,7 @@ GSI.Map = L.Map.extend( {
 	_initPanes: function () {
 		
 		L.Map.prototype._initPanes.call( this );
-		this._panes.gsiObjectsPane = this._createPane('gsi-objects-pane');
+		this._panes.gsiObjectsPane = this.createPane('gsi-objects-pane');
 	},
 	
 	_limitCenter: function (center, zoom, bounds) {
@@ -19911,7 +19911,7 @@ GSI.BaseLayer = L.TileLayer.extend({
 
 		var options = this.options;
 
-		var zoom = this._map.getZoom();
+		var zoom = this._tileZoom;
 
 		if ( this.highQuality )
 		{
@@ -19962,16 +19962,8 @@ GSI.BaseLayer = L.TileLayer.extend({
 		//this.options.noWrap = true;
 		this.setUrl( this._url );
 	},
-	_createTile: function () {
-		var tile = L.TileLayer.prototype._createTile.call(this);
-
-		return tile;
-	},
-	_tileOnLoad: function () {
-
-
-		var layer = this._layer;
-		if (layer.isGrayScale  && this.src !== L.Util.emptyImageUrl) {
+	_tileOnLoad: function (done, tile) {
+		if (tile.isGrayScale  && this.src !== L.Util.emptyImageUrl) {
 			$(this).addClass( "grayscale" );
 			if ( GSI.Utils.Browser.ie )
 			{
@@ -19989,11 +19981,11 @@ GSI.BaseLayer = L.TileLayer.extend({
 				}
 			}
 		}
-		L.TileLayer.prototype._tileOnLoad.call(this);
+		L.TileLayer.prototype._tileOnLoad.call(this, done, tile);
 	},
 
-	_createTile: function () {
-		var tile = L.TileLayer.prototype._createTile.call(this);
+	createTile: function (coords, done) {
+		var tile = L.TileLayer.prototype.createTile.call(this, coords, done);
 		//
 		if (this.isGrayScale )
 		{
