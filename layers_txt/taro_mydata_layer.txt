@@ -1,0 +1,20 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "Taro's my data",
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "tokyo_suido",
+          "title": "東京都水道局 震災時の給水拠点",
+          "iconUrl": "",
+          "url": "http://smellman.github.io/gsimaps/custom_layers/tokyo_suidou/{z}/{x}/{y}.geojson",
+          "html": "",
+          "maxZoom": 18,
+          "maxNativeZoom": 2
+        }
+      ]
+    }
+  ]
+}
