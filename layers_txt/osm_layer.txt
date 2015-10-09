@@ -1,0 +1,70 @@
+{
+  "layers": [
+    {
+      "type": "LayerGroup",
+      "title": "OpenStreetMap Layer",
+      "entries": [
+        {
+          "type": "Layer",
+          "id": "osm_main",
+          "title": "標準",
+          "iconUrl": "",
+          "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+          "subdomains": ["a", "b", "c"],
+          "attribution": "<a href='http://www.openstreetmap.org/copyright'>@ OpenStreetMap Contributors</a>",
+          "cocotile": false,
+          "legendUrl": "",
+          "html": ""
+        },
+        {
+          "type": "Layer",
+          "id": "osm_cycle",
+          "title": "サイクリングマップ",
+          "iconUrl": "",
+          "url": "http://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png",
+          "subdomains": ["a", "b", "c"],
+          "attribution": "<a href='http://www.openstreetmap.org/copyright'>@ OpenStreetMap Contributors</a>. Tiles courtesy of <a href='http://www.thunderforest.com/'>Andy Allan</a>",
+          "cocotile": false,
+          "legendUrl": "",
+          "html": ""
+        },
+        {
+          "type": "Layer",
+          "id": "osm_transport",
+          "title": "交通マップ",
+          "iconUrl": "",
+          "url": "http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png",
+          "subdomains": ["a", "b", "c"],
+          "attribution": "<a href='http://www.openstreetmap.org/copyright'>@ OpenStreetMap Contributors</a>. Tiles courtesy of <a href='http://www.thunderforest.com/'>Andy Allan</a>",
+          "cocotile": false,
+          "legendUrl": "",
+          "html": ""
+        },
+        {
+          "type": "Layer",
+          "id": "mapquest_open",
+          "title": "MapQuest Open",
+          "iconUrl": "",
+          "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png",
+          "subdomains": "",
+          "attribution": "<a href='http://www.openstreetmap.org/copyright'>@ OpenStreetMap Contributors</a>. Tiles courtesy of <a href='http://www.mapquest.com/'>MapQuest</a>",
+          "cocotile": false,
+          "legendUrl": "",
+          "html": ""
+        },
+        {
+          "type": "Layer",
+          "id": "humanitarian",
+          "title": "Humanitarian",
+          "iconUrl": "",
+          "url": "http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
+          "subdomains": ["a", "b", "c"],
+          "attribution": "<a href='http://www.openstreetmap.org/copyright'>@ OpenStreetMap Contributors</a>. Tiles courtesy of <a href='http://hot.openstreetmap.org/'>Humanitarian OpenStreetMap Team</a>",
+          "cocotile": false,
+          "legendUrl": "",
+          "html": ""
+        }
+      ]
+    }
+  ]
+}
